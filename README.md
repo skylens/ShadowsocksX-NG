@@ -1,8 +1,8 @@
 # ShadowsocksX-NG
 
-[Download](https://github.com/shadowsocks/ShadowsocksX-NG/releases/latest)
+[Download](https://github.com/skylens/ShadowsocksX-NG/releases/latest)
 
-[![Actions Status](https://github.com/shadowsocks/ShadowsocksX-NG/workflows/CI/badge.svg)](https://github.com/shadowsocks/ShadowsocksX-NG/actions)
+[![Actions Status](https://github.com/skylens/ShadowsocksX-NG/workflows/CI/badge.svg)](https://github.com/shadowsocks/ShadowsocksX-NG/actions)
 
 
 Thanks 
@@ -13,7 +13,7 @@ Thanks
 
 - [https://github.com/shadowsocks/v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin)
 
-Just repackage!!! upgrade ss-local, v2ray-plugin binary version
+Just repackage!!! remove kcptun and upgrade ss-local, v2ray-plugin binary version
 
 
 ## License
