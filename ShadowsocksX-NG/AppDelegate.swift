@@ -85,7 +85,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         InstallSSLocal()
         InstallPrivoxy()
         InstallSimpleObfs()
-        InstallKcptun()
         InstallV2rayPlugin()
         
         // Prepare defaults
