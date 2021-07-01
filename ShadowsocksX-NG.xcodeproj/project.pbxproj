@@ -11,7 +11,7 @@
 		683029B9268E1B3C00FA2DF6 /* ss-local in Resources */ = {isa = PBXBuildFile; fileRef = 683029B7268E1B3C00FA2DF6 /* ss-local */; };
 		683029CD268E1D1E00FA2DF6 /* v2ray-plugin in Resources */ = {isa = PBXBuildFile; fileRef = 683029CC268E1D1E00FA2DF6 /* v2ray-plugin */; };
 		683029D5268E1E1B00FA2DF6 /* obfs-local in Resources */ = {isa = PBXBuildFile; fileRef = 683029D4268E1E1B00FA2DF6 /* obfs-local */; };
-		683029E9268E207D00FA2DF6 /* libmbedcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 683029E8268E207D00FA2DF6 /* libmbedcrypto.dylib */; };
+		68889639268E2F1F000DDCDF /* libmbedcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 68889637268E2F1F000DDCDF /* libmbedcrypto.dylib */; };
 		9B0BFFE91D0460A70040E62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BFFE81D0460A70040E62B /* AppDelegate.swift */; };
 		9B0BFFEB1D0460A70040E62B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0BFFEA1D0460A70040E62B /* Assets.xcassets */; };
 		9B0BFFEE1D0460A70040E62B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0BFFEC1D0460A70040E62B /* MainMenu.xib */; };
@@ -148,6 +148,7 @@
 		683029CC268E1D1E00FA2DF6 /* v2ray-plugin */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "v2ray-plugin"; path = "ShadowsocksX-NG/v2ray-plugin/v2ray-plugin"; sourceTree = "<group>"; };
 		683029D4268E1E1B00FA2DF6 /* obfs-local */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "obfs-local"; path = "ShadowsocksX-NG/simple-obfs/obfs-local"; sourceTree = "<group>"; };
 		683029E8268E207D00FA2DF6 /* libmbedcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmbedcrypto.dylib; path = "ShadowsocksX-NG/ss-local/libmbedcrypto.dylib"; sourceTree = "<group>"; };
+		68889637268E2F1F000DDCDF /* libmbedcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmbedcrypto.dylib; sourceTree = "<group>"; };
 		9B0BFFE51D0460A70040E62B /* ShadowsocksX-NG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShadowsocksX-NG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0BFFE81D0460A70040E62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B0BFFEA1D0460A70040E62B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -256,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6BF9541E27B2570061B9A7 /* ServiceManagement.framework in Frameworks */,
+				68889639268E2F1F000DDCDF /* libmbedcrypto.dylib in Frameworks */,
 				683029E9268E207D00FA2DF6 /* libmbedcrypto.dylib in Frameworks */,
 				9B3FFF3E1D08D9910019A709 /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -414,7 +416,7 @@
 		9B5AA0A9209C41EC00E8B659 /* ss-local */ = {
 			isa = PBXGroup;
 			children = (
-				683029B8268E1B3C00FA2DF6 /* libmbedcrypto.dylib */,
+				68889637268E2F1F000DDCDF /* libmbedcrypto.dylib */,
 				683029B7268E1B3C00FA2DF6 /* ss-local */,
 				9BEEF0651D04CB8500FC52B3 /* install_ss_local.sh */,
 				9BEEF0661D04CE8D00FC52B3 /* start_ss_local.sh */,
