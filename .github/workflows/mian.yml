@@ -14,6 +14,8 @@ jobs:
     - name: install mbedtls
       run: |
         brew install mbedtls
+        pwd
+        ls -al
     
     - name: Run unit test
       run: |
