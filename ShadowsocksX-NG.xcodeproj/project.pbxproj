@@ -11,7 +11,8 @@
 		68159D0D268E349A00293112 /* v2ray-plugin in Resources */ = {isa = PBXBuildFile; fileRef = 68159D0C268E349A00293112 /* v2ray-plugin */; };
 		68159D12268E34A400293112 /* ss-local in Resources */ = {isa = PBXBuildFile; fileRef = 68159D11268E34A400293112 /* ss-local */; };
 		68159D17268E34AA00293112 /* obfs-local in Resources */ = {isa = PBXBuildFile; fileRef = 68159D16268E34AA00293112 /* obfs-local */; };
-		68159D1E268E34EB00293112 /* libmbedcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 683029E8268E207D00FA2DF6 /* libmbedcrypto.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		68159D1C268E34DB00293112 /* libmbedcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 683029E8268E207D00FA2DF6 /* libmbedcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		68159D1E268E34EB00293112 /* libmbedcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 683029E8268E207D00FA2DF6 /* libmbedcrypto.dylib */; };
 		9B0BFFE91D0460A70040E62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BFFE81D0460A70040E62B /* AppDelegate.swift */; };
 		9B0BFFEB1D0460A70040E62B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0BFFEA1D0460A70040E62B /* Assets.xcassets */; };
 		9B0BFFEE1D0460A70040E62B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0BFFEC1D0460A70040E62B /* MainMenu.xib */; };
@@ -114,6 +115,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		68159D1D268E34DB00293112 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				68159D1C268E34DB00293112 /* libmbedcrypto.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B3FFF421D09CD3B0019A709 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,6 +529,7 @@
 				9B0BFFE31D0460A70040E62B /* Resources */,
 				5E160625E3EC80E27DA7EF05 /* [CP] Embed Pods Frameworks */,
 				9B6BF9511E27B2250061B9A7 /* CopyFiles */,
+				68159D1D268E34DB00293112 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
