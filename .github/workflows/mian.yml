@@ -1,22 +1,32 @@
 name: main CI
 
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
+
   build:
 
     runs-on: macos-10.15
-    
+
     steps:
-    - uses: actions/checkout@v2
-    
-    - name: install mbedtls
-      run: |
-        brew install mbedtls
-        pwd
-        ls -al
-    
-    - name: Run unit test
-      run: |
-        set -o pipefail && xcodebuild test -workspace ShadowsocksX-NG.xcworkspace -scheme ShadowsocksX-NG|xcpretty
+
+      - uses: actions/checkout@v2
+
+      - name: build
+        run: |
+          chmod +x compile.sh
+          ./compile.sh
+
+      - name:  package
+        run: |
+          npm install -g appdmg
+          appdmg spec.json ShadowsocksX-NG.dmg
+      
+      - name: release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ShadowsocksX-NG.dmg
