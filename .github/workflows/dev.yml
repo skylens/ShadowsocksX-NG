@@ -58,7 +58,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
-          upload_url: ${{ needs.create_release.outputs.upload_url }}
           asset_path: ShadowsocksX-NG.dmg
           asset_name: ShadowsocksX-NG.dmg
           asset_content_type: application/dmg
