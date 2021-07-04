@@ -2,8 +2,7 @@
 
 [Download](https://github.com/skylens/ShadowsocksX-NG/releases/latest)
 
-[![Actions Status](https://github.com/skylens/ShadowsocksX-NG/workflows/CI/badge.svg)](https://github.com/skylens/ShadowsocksX-NG/actions)
-
+[![Actions Status](https://github.com/skylens/ShadowsocksX-NG/actions/workflows/mian.yml/badge.svg?branch=v1.9.6)](https://github.com/skylens/ShadowsocksX-NG/actions/workflows/mian.yml)
 
 Thanks 
 
