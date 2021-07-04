@@ -108,8 +108,7 @@ func InstallSSLocal() {
     let fileMgr = FileManager.default
     let homeDir = NSHomeDirectory()
     let appSupportDir = homeDir+APP_SUPPORT_DIR
-    if !fileMgr.fileExists(atPath: appSupportDir + "ss-local/ss-local")
-       || !fileMgr.fileExists(atPath: appSupportDir + "ss-local/libmbedcrypto.dylib") {
+    if !fileMgr.fileExists(atPath: appSupportDir + "ss-local/ss-local") {
         let bundle = Bundle.main
         let installerPath = bundle.path(forResource: "install_ss_local.sh", ofType: nil)
         let task = Process.launchedProcess(launchPath: installerPath!, arguments: [""])
@@ -231,6 +230,26 @@ func InstallV2rayPlugin() {
             NSLog("Install v2ray-plugin succeeded.")
         } else {
             NSLog("Install v2ray-plugin failed.")
+        }
+    }
+}
+
+// --------------------------------------------------------------------------------
+//  MARK: Cloak-plugin
+
+func InstallCloakPlugin() {
+    let fileMgr = FileManager.default
+    let homeDir = NSHomeDirectory()
+    let appSupportDir = homeDir+APP_SUPPORT_DIR
+    if !fileMgr.fileExists(atPath: appSupportDir + "CloakPlugin/ck-client") {
+        let bundle = Bundle.main
+        let installerPath = bundle.path(forResource: "install_Cloak_plugin", ofType: "sh")
+        let task = Process.launchedProcess(launchPath: "/bin/sh", arguments: [installerPath!])
+        task.waitUntilExit()
+        if task.terminationStatus == 0 {
+            NSLog("Install Cloak-plugin succeeded.")
+        } else {
+            NSLog("Install Cloak-plugin failed.")
         }
     }
 }

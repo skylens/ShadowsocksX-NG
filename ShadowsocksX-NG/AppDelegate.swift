@@ -86,6 +86,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         InstallPrivoxy()
         InstallSimpleObfs()
         InstallV2rayPlugin()
+        InstallCloakPlugin()
         
         // Prepare defaults
         let defaults = UserDefaults.standard
@@ -434,11 +435,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     @IBAction func feedback(_ sender: NSMenuItem) {
-        NSWorkspace.shared.open(URL(string: "https://github.com/qiuyuzhou/ShadowsocksX-NG/issues")!)
+        NSWorkspace.shared.open(URL(string: "https://github.com/skylens/ShadowsocksX-NG/issues")!)
     }
     
     @IBAction func checkForUpdates(_ sender: NSMenuItem) {
-        NSWorkspace.shared.open(URL(string: "https://github.com/shadowsocks/ShadowsocksX-NG/releases")!)
+        NSWorkspace.shared.open(URL(string: "https://github.com/skylnes/ShadowsocksX-NG/releases")!)
     }
     
     @IBAction func exportDiagnosis(_ sender: NSMenuItem) {
