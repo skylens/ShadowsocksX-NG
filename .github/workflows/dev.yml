@@ -32,4 +32,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
           files: /Users/runner/ShadowsocksX-NG-*.tgz
-          prerelease: ${{ contains(github.ref, '-') }}
+          prerelease: ${{ contains(github.ref, 'refs/heads/release/') }}
