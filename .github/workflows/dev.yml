@@ -27,32 +27,42 @@ jobs:
           ./compile.sh
 
       # https://betterprogramming.pub/indie-mac-app-devops-with-github-actions-b16764a3ebe7
-      - name: set environment variables from project settings
-        run: |
-          function set-env-from-proj {
-            echo "::set-env name=$1::$(xcodebuild -scheme "ShadowsocksX-NG" -showBuildSettings | grep " $1 " | sed "s/[ ]*$1 = //")"
-          }
-          set-env-from-proj FULL_PRODUCT_NAME
-          set-env-from-proj INSTALL_PATH
-          set-env-from-proj PRODUCT_BUNDLE_IDENTIFIER
-          set-env-from-proj PRODUCT_MODULE_NAME
-          set-env-from-proj PRODUCT_NAME
-          set-env-from-proj PROJECT_NAME
-          xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -workspace /Users/runner/ShadowsocksX-NG/ShadowsocksX-NG.xcworkspace -scheme ShadowsocksX-NG | xcpretty
+      # - name: set environment variables from project settings
+      #   run: |
+      #     function set-env-from-proj {
+      #       echo "::set-env name=$1::$(xcodebuild -scheme "ShadowsocksX-NG" -showBuildSettings | grep " $1 " | sed "s/[ ]*$1 = //")"
+      #     }
+      #     set-env-from-proj FULL_PRODUCT_NAME
+      #     set-env-from-proj INSTALL_PATH
+      #     set-env-from-proj PRODUCT_BUNDLE_IDENTIFIER
+      #     set-env-from-proj PRODUCT_MODULE_NAME
+      #     set-env-from-proj PRODUCT_NAME
+      #     set-env-from-proj PROJECT_NAME
+      #     xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -workspace /Users/runner/ShadowsocksX-NG/ShadowsocksX-NG.xcworkspace -scheme ShadowsocksX-NG | xcpretty
+
+      # - name:  package
+      #   run: |
+      #     hdiutil create \
+      #     -fs HFS+ \
+      #     -srcfolder "build/root/Applications/ShadowsocksX-NG.app" \
+      #     -volname "ShadowsocksX-NG" "build/ShadowsocksX-NG.dmg"
 
       - name:  package
         run: |
-          hdiutil create \
-                  -fs HFS+ \
-                  -srcfolder "build/root/$INSTALL_PATH/$FULL_PRODUCT_NAME" \
-                  -volname "$PRODUCT_NAME" "build/$PRODUCT_MODULE_NAME.dmg"
-      
-      - name: Upload Github Assets
-        uses: softprops/action-gh-release@v1
+          npm install -g appdmg
+          appdmg spec.json ShadowsocksX-NG.dmg
+
+      - name: release
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
-          files: /Users/runner/ShadowsocksX-NG-*.tgz
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: ShadowsocksX-NG.dmg
+          asset_name: ShadowsocksX-NG.dmg
+          asset_content_type: application/dmg
+
       # - name: release
       #   id: create_release
       #   uses: actions/create-release@latest
