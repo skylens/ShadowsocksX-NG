@@ -21,6 +21,3 @@ xcodebuild clean archive \
 xcodebuild install DSTROOT=build/root \
 -workspace /Users/runner/ShadowsocksX-NG/ShadowsocksX-NG.xcworkspace \
 -scheme ShadowsocksX-NG | xcpretty
-
-npm install -g appdmg
-appdmg spec.json ShadowsocksX-NG.dmg
