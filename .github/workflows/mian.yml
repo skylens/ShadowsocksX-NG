@@ -29,7 +29,7 @@ jobs:
       - name: release
         uses: softprops/action-gh-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: build/releases/*
           prerelease: ${{ contains(github.ref, '-') }}
