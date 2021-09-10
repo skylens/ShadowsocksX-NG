@@ -22,9 +22,18 @@ jobs:
 
       - name:  package
         run: |
-          npm install -g appdmg
-          mkdir -p build/releases
-          appdmg spec.json build/releases/ShadowsocksX-NG-${GITHUB_REF#refs/tags/}.dmg
+          # npm install -g appdmg
+          # mkdir -p build/releases
+          # appdmg spec.json build/releases/ShadowsocksX-NG-${GITHUB_REF#refs/tags/}.dmg
+          brew install create-dmg
+          create-dmg \
+          --volname "ShadowsocksX-NG" \
+          --window-pos 200 120 \
+          --window-size 800 400 \
+          --hide-extension "ShadowsocksX-NG.app" \
+          --app-drop-link 600 185 \
+          "ShadowsocksX-NG.dmg" \
+          "build/root/Applications/"
       
       - name: release
         uses: softprops/action-gh-release@v1
