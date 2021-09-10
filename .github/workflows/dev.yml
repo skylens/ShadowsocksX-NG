@@ -28,13 +28,13 @@ jobs:
 
       - name:  package
         run: |
-          npm install -g appdmg
-          appdmg spec.json build/releases/ShadowsocksX-NG.dmg
+          mkdir -p build/releases
+          tar -zcvf build/releases/ShadowsocksX-NG.tgz build/root/Applications/ShadowsocksX-NG.app
       
       - name: upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: ShadowsocksX-NG
-          path: build/releases/ShadowsocksX-NG.dmg
+          path: build/releases/ShadowsocksX-NG.tgz
           retention-days: 5
 
