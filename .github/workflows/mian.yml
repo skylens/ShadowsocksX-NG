@@ -41,5 +41,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: ShadowsocksX-NG-${GITHUB_REF#refs/tags/}.dmg
+          files: ShadowsocksX-NG-*.dmg
           prerelease: ${{ contains(github.ref, '-') }}
