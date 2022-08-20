@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C82DBAA1FA96FB600B32551 /* install_simple_obfs.sh in Resources */ = {isa = PBXBuildFile; fileRef = 1C82DBA91FA96F0300B32551 /* install_simple_obfs.sh */; };
+		68048B7228B1959A001B4D9E /* ss-local in Resources */ = {isa = PBXBuildFile; fileRef = 68048B7128B1959A001B4D9E /* ss-local */; };
 		68159D0D268E349A00293112 /* v2ray-plugin in Resources */ = {isa = PBXBuildFile; fileRef = 68159D0C268E349A00293112 /* v2ray-plugin */; };
-		68159D12268E34A400293112 /* ss-local in Resources */ = {isa = PBXBuildFile; fileRef = 68159D11268E34A400293112 /* ss-local */; };
 		68159D17268E34AA00293112 /* obfs-local in Resources */ = {isa = PBXBuildFile; fileRef = 68159D16268E34AA00293112 /* obfs-local */; };
 		68B74AAD26917ABE001BE8B7 /* ck-client in Resources */ = {isa = PBXBuildFile; fileRef = 68B74AAC26917ABE001BE8B7 /* ck-client */; };
 		68B74AB526917B1B001BE8B7 /* install_Cloak_plugin.sh in Resources */ = {isa = PBXBuildFile; fileRef = 68B74AB426917B1B001BE8B7 /* install_Cloak_plugin.sh */; };
@@ -145,8 +145,8 @@
 		388120F062D7EB7DD0D8DDCA /* Pods_ShadowsocksX_NGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShadowsocksX_NGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC7CD9886196A997D6FC78D /* Pods-ShadowsocksX-NGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowsocksX-NGTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShadowsocksX-NGTests/Pods-ShadowsocksX-NGTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B6203C1228FCD3D365814AC /* Pods-ShadowsocksX-NGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowsocksX-NGTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShadowsocksX-NGTests/Pods-ShadowsocksX-NGTests.debug.xcconfig"; sourceTree = "<group>"; };
+		68048B7128B1959A001B4D9E /* ss-local */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "ss-local"; sourceTree = "<group>"; };
 		68159D0C268E349A00293112 /* v2ray-plugin */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "v2ray-plugin"; sourceTree = "<group>"; };
-		68159D11268E34A400293112 /* ss-local */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "ss-local"; sourceTree = "<group>"; };
 		68159D16268E34AA00293112 /* obfs-local */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "obfs-local"; sourceTree = "<group>"; };
 		683029E8268E207D00FA2DF6 /* libmbedcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmbedcrypto.dylib; path = "ShadowsocksX-NG/ss-local/libmbedcrypto.dylib"; sourceTree = "<group>"; };
 		68B74AAC26917ABE001BE8B7 /* ck-client */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "ck-client"; sourceTree = "<group>"; };
@@ -426,7 +426,7 @@
 		9B5AA0A9209C41EC00E8B659 /* ss-local */ = {
 			isa = PBXGroup;
 			children = (
-				68159D11268E34A400293112 /* ss-local */,
+				68048B7128B1959A001B4D9E /* ss-local */,
 				9BEEF0651D04CB8500FC52B3 /* install_ss_local.sh */,
 				9BEEF0661D04CE8D00FC52B3 /* start_ss_local.sh */,
 				9BEEF0671D04CE9A00FC52B3 /* stop_ss_local.sh */,
@@ -684,7 +684,6 @@
 				68B74AAD26917ABE001BE8B7 /* ck-client in Resources */,
 				9B7297EC214DA88A00FD24AA /* ShareServerProfilesWindowController.xib in Resources */,
 				9B3FFF271D0898EB0019A709 /* gfwlist.txt in Resources */,
-				68159D12268E34A400293112 /* ss-local in Resources */,
 				C6D429931DA75988002A5711 /* install_privoxy.sh in Resources */,
 				9BC70EDC1D2E3E3100EDA4CA /* Localizable.strings in Resources */,
 				9B0BFFEE1D0460A70040E62B /* MainMenu.xib in Resources */,
@@ -694,6 +693,7 @@
 				C6D429961DA75988002A5711 /* start_privoxy.sh in Resources */,
 				9BAA662A23295FAB00F5CC99 /* menu_icon@2x.png in Resources */,
 				9B5AA0AC209C43C200E8B659 /* Credits.rtf in Resources */,
+				68048B7228B1959A001B4D9E /* ss-local in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,7 +1038,7 @@
 					"$(PROJECT_DIR)/ShadowsocksX-NG/ss-local",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.9.6;
+				MARKETING_VERSION = 1.9.8;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qiuyuzhou.ShadowsocksX-NG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1077,7 +1077,7 @@
 					"$(PROJECT_DIR)/ShadowsocksX-NG/ss-local",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.9.6;
+				MARKETING_VERSION = 1.9.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qiuyuzhou.ShadowsocksX-NG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
